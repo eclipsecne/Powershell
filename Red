@@ -1,0 +1,21 @@
+Lanzamos la consulta:
+
+Get-NetIPAddress -AddressFamily IPv4
+
+
+
+Y configuramos la nueva red con:
+
+New-NetIPAddress -InterfaceIndex 12 -IPAddress 192.168.1.30 -PrefixLength 24 -DefaultGateway 192.168.1.2
+
+
+
+Una vez que tenemos cambiada la dirección Ip del host, voy ha cambiar la dirección DNS para que apunte a nuestro controlador de dominio.
+
+Set-DnsClientServerAddress -InterfaceIndex 12 -ServerAddress 192.168.1.10
+
+
+
+Para ver la configuración que hemos cambiado de la tarjeta de red.
+
+Get-NetIPConfiguration -InterfaceIndex 12

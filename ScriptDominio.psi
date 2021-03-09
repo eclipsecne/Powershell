@@ -1,0 +1,4 @@
+$Domain = ‘bbva-impulse.itq’
+$hostname = Read-Host “Nombre del equipo”
+Rename-Computer $hostname
+Add-computer -domainname $Domain -Credential “bbva-impulse\administrator” -newname $hostname -Restart -Force

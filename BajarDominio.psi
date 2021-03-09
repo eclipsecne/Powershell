@@ -1,0 +1,1 @@
+Remove-Computer -ComputerName bbva-impulse.itq -Credential bbva-impulse\Administrador -Restart -Force

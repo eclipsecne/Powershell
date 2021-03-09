@@ -1,0 +1,1 @@
+add-computer -domainname bbva-impulse.itq -Credential bbva-impulse\Administrator -Restart -Force
