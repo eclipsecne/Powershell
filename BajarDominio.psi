@@ -1,1 +1,4 @@
-Remove-Computer -ComputerName bbva-impulse.itq -Credential bbva-impulse\Administrador -Restart -Force
+$Hostname = (Get-CimInstance -ClassName Win32_ComputerSystem).Name
+#Write-Output $Hostname
+
+Remove-Computer -ComputerName $Hostname -Credential 'itm\soporte' -WorkgroupName 'WORKGROUP' -PassThru -Verbose -Restart -Force
