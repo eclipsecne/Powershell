@@ -1,1 +1,5 @@
-add-computer -domainname bbva-impulse.itq -Credential bbva-impulse\Administrator -Restart -Force
+$Domain = 'itm.qro.mx'
+$Hostname = Read-Host 'Nombre del equipo'
+Rename-Computer $Hostname
+
+Add-computer -domainname $Domain -Credential 'soporte' -newname $Hostname -Restart -Force
